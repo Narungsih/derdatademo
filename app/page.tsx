@@ -5,7 +5,7 @@ import { PanelMenu } from 'primereact/panelmenu';
 export default function Home() {
   const items: MenuItem[] = [
     {
-      label: 'Files',
+      label: 'DataSet 1',
       icon: 'pi pi-file',
       items: [
         {
@@ -59,8 +59,8 @@ export default function Home() {
   ];
   return (
     <div className="flex m-5 w-1/4 flex-col justify-center">
-      <h1 className="text-gray-800 text-2xl">ระบบนำเข้าข้อมูล</h1>
-      <PanelMenu model={items} className="w-full md:w-20rem" />
+      <h1 className="text-gray-800 text-2xl font-bold">ระบบนำเข้าข้อมูล</h1>
+      <PanelMenu model={items} className="w-full md:w-20rem my-10" />
     </div>
   );
 }

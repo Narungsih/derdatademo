@@ -14,15 +14,11 @@ export default function SaveData() {
     code: string;
     name: string;
     description: string;
-    image: string;
-    price: number;
-    category: string;
-    quantity: number;
-    inventoryStatus: string;
-    rating: number;
   }
 
   const [value, setValue] = useState<string>('');
+  const [value2, setValue2] = useState<string>('');
+  const [value3, setValue3] = useState<string>('');
   const [products, setProducts] = useState<Product[]>([]);
 
   useEffect(() => {
@@ -52,7 +48,7 @@ export default function SaveData() {
 
   return (
     <div className="flex flex-col m-10">
-      <h1 className="text-gray-800 text-2xl mb-10">Save Data</h1>
+      <h1 className="text-gray-800 text-2xl mb-10 font-bold">Save Data</h1>
       <div className="flex justify-center">
         <div className="flex w-fit flex-col justify-center border-1 border-gray-200 rounded-lg shadow-md p-10">
           <div className="flex flex-wrap justify-center gap-5">
@@ -96,28 +92,28 @@ export default function SaveData() {
             </FloatLabel>
             <FloatLabel>
               <InputText
-                id="text1"
-                value={value}
-                onChange={(e: React.ChangeEvent<HTMLInputElement>) => setValue(e.target.value)}
+                id="text2"
+                value={value2}
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) => setValue2(e.target.value)}
               />
-              <label htmlFor="text1">TextField 1</label>
+              <label htmlFor="text1">TextField 2</label>
             </FloatLabel>
             <FloatLabel>
               <InputText
-                id="text1"
-                value={value}
-                onChange={(e: React.ChangeEvent<HTMLInputElement>) => setValue(e.target.value)}
+                id="text3"
+                value={value3}
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) => setValue3(e.target.value)}
               />
-              <label htmlFor="text1">TextField 1</label>
+              <label htmlFor="text1">TextField 3</label>
             </FloatLabel>
             <Button label="Save" className="w-[200] md:w-14rem" />
           </div>
           <div className="flex flex-wrap justify-center my-10 gap-5">
             <DataTable value={products} tableStyle={{ minWidth: '50rem' }}>
+              <Column field="id" header="id"></Column>
               <Column field="code" header="Code"></Column>
               <Column field="name" header="Name"></Column>
-              <Column field="category" header="Category"></Column>
-              <Column field="quantity" header="Quantity"></Column>
+              <Column field="description" header="Description"></Column>
             </DataTable>
           </div>
         </div>

@@ -36,7 +36,7 @@ export default function ImportData() {
 
   return (
     <div className="flex flex-col m-10">
-      <h1 className="text-gray-800 text-2xl mb-10">Import Data</h1>
+      <h1 className="text-gray-800 text-2xl mb-10 font-bold">Import Data</h1>
       <div className="flex justify-center">
         <div className="flex w-fit flex-col justify-center border-1 border-gray-200 rounded-lg shadow-md p-10">
           <div className="flex flex-wrap justify-center gap-5">
@@ -80,8 +80,8 @@ export default function ImportData() {
               onUpload={onUpload}
             />
           </div>
-          <div className="flex flex-wrap justify-center my-10 gap-5">
-            <Button label="Import" />
+          <div className="flex flex-wrap justify-center mt-10 gap-5">
+            <Button className='w-[200]' label="Import" />
           </div>
         </div>
       </div>
