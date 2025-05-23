@@ -47,7 +47,7 @@ export default function SaveData() {
   ];
 
   return (
-    <div className="flex flex-col m-10">
+    <div className="flex flex-col">
       <h1 className="text-gray-800 text-2xl mb-10 font-bold">Save Data</h1>
       <div className="flex justify-center">
         <div className="flex w-full md:w-fit flex-col justify-center bg-white border-1 border-gray-200 rounded-lg shadow-md p-10">

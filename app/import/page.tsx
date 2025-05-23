@@ -35,7 +35,7 @@ export default function ImportData() {
   };
 
   return (
-    <div className="flex flex-col m-10">
+    <div className="flex flex-col">
       <h1 className="text-gray-600 text-2xl mb-10 font-bold">Import Data</h1>
       <div className="flex justify-center">
         <div className="flex w-fit flex-col justify-center bg-white border-1 border-gray-200 rounded-lg shadow-md p-10">
